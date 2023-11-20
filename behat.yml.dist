@@ -19,4 +19,4 @@ default:
         wcag2a: WCAG 2.1 A
         wcag2aa: WCAG 2.1 AA
         wcag2aaa: WCAG 2.1 AAA
-      reports_dir: reports
+      reports_dir: /tmp
