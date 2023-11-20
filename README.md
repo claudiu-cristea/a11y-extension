@@ -19,16 +19,16 @@ suites:
     contexts:
       - Behat\A11yExtension\Context\A11yContext
   extensions:
-      Behat\A11yExtension:
-          # You can also use a local path accessible by the webserver 
-          axe_script_src: https://cdnjs.cloudflare.com/ajax/libs/axe-core/4.8.2/axe.min.js
-          # See https://github.com/dequelabs/axe-core/blob/develop/doc/API.md#axe-core-tags
-          standard_tags:
-              wcag2a: WCAG 2.1 A
-              wcag2aa: WCAG 2.1 AA
-              wcag2aaa: WCAG 2.1 AAA
-          # Where to store the accessibility reports containing the violations              
-          reports_dir: /tmp
+    Behat\A11yExtension:
+      # You can also use a local path accessible by the webserver 
+      axe_script_src: https://cdnjs.cloudflare.com/ajax/libs/axe-core/4.8.2/axe.min.js
+      # See https://github.com/dequelabs/axe-core/blob/develop/doc/API.md#axe-core-tags
+      standard_tags:
+        wcag2a: WCAG 2.1 A
+        wcag2aa: WCAG 2.1 AA
+        wcag2aaa: WCAG 2.1 AAA
+      # Where to store the accessibility reports containing the violations              
+      reports_dir: /tmp
 ```
 
 ## Usage
