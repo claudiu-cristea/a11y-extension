@@ -9,7 +9,7 @@ jobs:
         php_version: ["8.1", "8.2"]
     env:
       PHP_VERSION: ${{ matrix.php_version }}
-      DOCKER_USER_ID: "1001"
+#      DOCKER_USER_ID: "1001"
     steps:
       - name: clone
         uses: actions/checkout@v3
