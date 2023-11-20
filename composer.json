@@ -1,0 +1,38 @@
+{
+    "name": "claudiu-cristea/a11y-extension",
+    "description": "Behat extension to check accessibility using Axe",
+    "type": "behat-extension",
+    "license": [
+        "MIT"
+    ],
+    "authors": [
+        {
+            "name": "Claudiu Cristea",
+            "email": "clau.cristea@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "friends-of-behat/mink-extension": "^2.7"
+    },
+    "require-dev": {
+        "behat/mink-goutte-driver": "^2.0",
+        "behat/mink-selenium2-driver": "^1.6",
+        "squizlabs/php_codesniffer": "^3.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Behat\\A11yExtension\\": "src"
+        }
+    },
+    "scripts": {
+        "test": [
+            "composer validate --no-interaction",
+            "vendor/bin/phpcs",
+            "vendor/bin/behat -fprogress --strict"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

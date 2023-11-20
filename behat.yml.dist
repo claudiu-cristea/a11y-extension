@@ -1,0 +1,22 @@
+default:
+  suites:
+    default:
+      contexts:
+        - Behat\MinkExtension\Context\MinkContext
+        - Behat\A11yExtension\Context\A11yContext
+  extensions:
+    Behat\MinkExtension:
+      goutte: ~
+      base_url: http://web
+      javascript_session: selenium2
+      browser_name: chrome
+      browserkit_http: ~
+      selenium2:
+        wd_host: http://selenium:4444/wd/hub
+    Behat\A11yExtension:
+      axe_script_src: https://cdnjs.cloudflare.com/ajax/libs/axe-core/4.8.2/axe.min.js
+      standard_tags:
+        wcag2a: WCAG 2.1 A
+        wcag2aa: WCAG 2.1 AA
+        wcag2aaa: WCAG 2.1 AAA
+      reports_dir: reports

@@ -1,0 +1,23 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        php_version: ["8.1", "8.2"]
+    env:
+      PHP_VERSION: ${{ matrix.php_version }}
+      DOCKER_USER_ID: "1001"
+    steps:
+      - name: clone
+        uses: actions/checkout@v3
+      - name: docker-compose up -d
+        run: docker-compose up -d
+      - name: composer self-update
+        run: docker-compose exec -T php composer self-update
+      - name: composer install
+        run: docker-compose exec -T php composer install
+      - name: composer test
+        run: docker-compose exec -T php composer test
