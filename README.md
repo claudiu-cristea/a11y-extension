@@ -1,4 +1,5 @@
 # Accessibility Extension 
+[![ci](https://github.com/claudiu-cristea/a11y-extension/actions/workflows/ci.yml/badge.svg)](https://github.com/claudiu-cristea/a11y-extension/actions/workflows/ci.yml)
 
 This library provides step definitions for checking the Accessibility Compliance in Behat scenarios.
 
